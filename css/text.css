@@ -1,0 +1,51 @@
+/* TEXT BLOCKS */
+.text-block {
+    color: var(--dark-grey);
+    font-size: 1em;
+    width: 24em;
+    height: max-content;
+}
+.text-block > h4 {
+    font-size: 3em;
+    margin: 0;
+}
+.text-block > p {
+    margin-top: 2.5em;
+    margin-bottom: 1.875em;
+}
+.left-text-block {
+    margin-right: 5em;
+}
+.right-text-block {
+    margin-left: 5em;
+}
+.text-block > a {
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-decoration: none;
+    color: var(--med-purple);
+}
+
+h3 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .left-text-block, .right-text-block {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
+    .left-text-block, .right-text-block {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 479px) {
+}

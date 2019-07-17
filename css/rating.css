@@ -1,0 +1,12 @@
+.rating-container {
+    width: 21.25em;
+    height: max-content;
+}
+.star-rating {
+    width: max-content;
+}
+.star {
+    width: 1.6em;
+    height: 1.6em;
+    color: var(--orange)
+}

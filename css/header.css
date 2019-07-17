@@ -1,0 +1,84 @@
+.header {
+    background-image: url(/img/hero.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    width: 100%;
+    height: 46em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.header > img {
+    width: 14em;
+    height: auto;
+    opacity: .85;
+    position: absolute;
+    left: 10em;
+    top: 2.5em;
+}
+
+/* HEADER TEXT */
+.header > h1{
+    color: white;
+    font-size: 4em;
+    letter-spacing: .05em;
+    margin: 0;
+}
+.header .outline {
+    font-size: 4.5em;
+    color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+}
+
+/* HEADER BUTTON */
+.btn-header {
+    background-color: var(--purple);
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .header {
+        height: 60vh;
+    }
+    .header > img {
+        left: 2.5em;
+        top: 2.5em;
+    }
+    .header > h1{
+        font-size: 3.75em;
+    }
+    .header .outline {
+        font-size: 4.25em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
+    .header {
+        height: 55vh;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .header {
+        height: 45vh;
+        grid-column-start: 1;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .header {
+        height: 35vh;
+    }
+    .header > img {
+        width: 24em;
+        height: auto;
+    }
+    .block-full-width {
+        grid-template-columns: 1fr;
+    }
+}

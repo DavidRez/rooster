@@ -1,0 +1,10 @@
+/* COLORS */
+.bg-white {
+    background-color: white;
+}
+.bg-grey {
+    background-color: #fafafa;
+}
+.dark-purple {
+    color: var(--dark-purple);
+}

@@ -1,0 +1,33 @@
+.icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 6.25em;
+    grid-row-gap: 3.7em;
+    margin-left: 5em;
+}
+.icon {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.25em;
+}
+.icon > h5 {
+    font-size: 1.25em;
+    color: var(--dark-grey);
+    margin: 1.2em 0 0 0;
+}
+.circle {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: 1px solid var(--med-purple);
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.circle img {
+    width: 60%;
+    margin: 0 auto;
+}
