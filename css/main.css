@@ -1,37 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 :root {
-    --main-font: 'Roboto', sans-serif;
-
-    --light-grey: #fafafa;
-    --dark-grey: #414141;
-
-    --light-orange: #f8e46e;
-    --med-orange: #f1c736;
-    --orange: #e27227;
-
-    --purple: #995fcc;
-    --light-purple: #a06bcf;
-    --med-purple: #65497e;
-    --dark-purple: #583771;
-}  
+  --main-font: Arial, Helvetica, sans-serif;
+}
 body {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-family: var(--main-font);
-    font-size: 16px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: var(--main-font);
+  font-size: 16px;
 }
+
+/* INITIAL H3 */
+h3 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* INITIAL BUTTON */
 .rg-btn {
-    width: 11em;
-    height: 3.5em;
-    color: white;
-    border: none;
-    font-size: .95em;
-    margin: 1.5em 0 0 0;
+  width: 11em;
+  height: 3.5em;
+  color: var(--color-light);
+  border: none;
+  font-size: 0.95em;
+  margin: 1.25em 0 0 0;
 }
- 
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    body {
-        grid-template-columns: 1fr;
-    }
+  body {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 479px) {
+  body {
+    grid-template-columns: 1fr;
+  }
 }

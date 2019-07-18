@@ -1,81 +1,128 @@
 /* CAROUSEL container */
+.carousel-container {
+  width: 34.6em;
+  height: 10.6em;
+  margin: 2.5em;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  display: grid;
+  grid-template-columns: 1fr 7.5fr 1fr;
+  align-items: center;
+}
+
 .carousel {
-    position: relative;
-    width: 34.6em;
-    height: 10.6em;
-    display: grid;
-    grid-template-columns: 3.75em 28.5em 3.7em;
-    align-items: center;
-  }
-  
-  /* QUOTES */
-  .quote {
-    display: none;
-    width: 28.5em;
-    height: 10.6em;
-    flex-direction: column;
+  width: 28em;
+  min-height: 10.6em;
+  margin: 0;
 
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-  .quote > h6 {
-    width: max-content;
-    font-size: 1.125em;
-    font-weight: bold;
-    margin: 0 auto;
-  }
-  .quote > p {
-    width: 100%;
-    font-size: 1em;
-    color: var(--dark-grey);
-    margin: 1.25em 0;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    grid-row-start: 1;
-    cursor: pointer;
-    width: 100%;
-    color: var(--dark-purple);
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  .next {
-    text-align: right;
-    grid-column-start: 3;
-    grid-column-end: 4;
-  }
-  .prev {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-  .carousel > a, .prev:hover, .next:hover {
-    text-decoration: none;
-  }
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
 
-  /* The dot/bullet/indicator container */
+/* QUOTES */
+.quote {
+  display: none;
+  width: 100%;
+  height: max-content;
+
+  flex-direction: column;
+}
+.quote > h6 {
+  color: var(--color-primary-dark);
+  font-size: 1.125em;
+  font-weight: bold;
+  width: max-content;
+  margin: 0 auto;
+}
+.quote > p {
+  width: 100%;
+  font-size: 1em;
+  color: var(--color-dark);
+  margin: 1.25em auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  grid-row-start: 1;
+  cursor: pointer;
+  width: 100%;
+  color: var(--color-primary-dark);
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  text-align: right;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.prev {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.carousel-container > a,
+.prev:hover,
+.next:hover {
+  text-decoration: none;
+}
+
+/* The dot/bullet/indicator container */
 .dot-container {
-    text-align: center;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    margin: 0;
-    padding: 0;
-  }
+  height: max-content;
+  text-align: center;
   
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: .7em;
-    width: .7em;
-    margin: 0 2px;
-    background-color: var(--light-orange);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 0;
+  padding: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot{
+  cursor: pointer;
+  height: 0.7em;
+  width: 0.7em;
+  margin: 0 2px;
+  background-color: var(--color-secondary-light);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: var(--color-secondary-med);
+}
+.slick-dots li.slick-active > .dot {
+  background-color: var(--color-secondary-med);
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .carousel-container {
+    width: 31em;
   }
-  
-  /* Add a background color to the active dot/circle */
-  .active, .dot:hover {
-    background-color: var(--med-orange);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel-container {
+    height: max-content;
   }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .carousel-container {
+    width: 90%;
+    height: max-content;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .carousel-container {
+    width: 90%;
+    height: max-content;
+  }
+}

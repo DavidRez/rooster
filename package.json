@@ -1,0 +1,30 @@
+{
+  "name": "rooster-grin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "simplehttpserver ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidRez/rooster.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidRez/rooster/issues"
+  },
+  "homepage": "https://github.com/DavidRez/rooster#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "simplehttpserver": "^0.3.0"
+  }
+}

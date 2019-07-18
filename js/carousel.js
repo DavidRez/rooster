@@ -1,26 +1,22 @@
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("quote");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+$(document).ready(function() {
+  $(".carousel").slick({
+    autoplay: true,
+    autoplaySpeed: 6000,
+    speed: 800,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    accessibility: true,
+    dots: true,
+    arrows: false,
+    variableWidth: false,
+    customPaging: function(slider, i) {
+      return '<span class="dot"></span>';
     }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "flex"; 
-  dots[slideIndex-1].className += " active";
-}
+  });
+  $(".prev").on("click", function() {
+    $(".slick-slider").slick("slickPrev");
+  });
+  $(".next").on("click", function() {
+    $(".slick-slider").slick("slickNext");
+  });
+});
